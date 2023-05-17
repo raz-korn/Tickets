@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"Tickets2Service","DetailsURL":"./service/Tickets2/","Metadata":"./service/Tickets2/$metadata","Entities":[{"Name":"Tickets","URL":"./service/Tickets2/Tickets","FioriURL":"$fiori-preview/Tickets2Service/Tickets#preview-app"}],"EntitiesCount":1}]}
+                            const data = {"Services":[{"ServiceName":"Tickets2Service","DetailsURL":"./service/Tickets2/","Metadata":"./service/Tickets2/$metadata","Entities":[{"Name":"Tickets","URL":"./service/Tickets2/Tickets","FioriURL":"$fiori-preview/Tickets2Service/Tickets#preview-app"},{"Name":"Customers","URL":"./service/Tickets2/Customers","FioriURL":"$fiori-preview/Tickets2Service/Customers#preview-app"}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

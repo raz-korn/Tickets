@@ -1,3 +1,4 @@
+using { Northwind_full_url } from '../srv/external/Northwind_full_url.cds'; 
 namespace Tickets2;
 
 using
