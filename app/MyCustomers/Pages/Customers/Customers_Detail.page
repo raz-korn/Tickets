@@ -1,0 +1,93 @@
+{
+	"Caption": "Customers Detail",
+	"DesignTimeTarget": {
+		"Service": "/MyCustomers/Services/service1.service",
+		"EntitySet": "Customers",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ContactTitle}",
+						"Subhead": "{CustomerID}",
+						"BodyText": "",
+						"Footnote": "{ContactName}",
+						"Description": "{CompanyName}",
+						"StatusText": "{Address}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{City}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "CustomerID",
+							"Value": "{CustomerID}"
+						},
+						{
+							"KeyName": "CompanyName",
+							"Value": "{CompanyName}"
+						},
+						{
+							"KeyName": "ContactName",
+							"Value": "{ContactName}"
+						},
+						{
+							"KeyName": "ContactTitle",
+							"Value": "{ContactTitle}"
+						},
+						{
+							"KeyName": "Address",
+							"Value": "{Address}"
+						},
+						{
+							"KeyName": "City",
+							"Value": "{City}"
+						},
+						{
+							"KeyName": "Region",
+							"Value": "{Region}"
+						},
+						{
+							"KeyName": "PostalCode",
+							"Value": "{PostalCode}"
+						},
+						{
+							"KeyName": "Country",
+							"Value": "{Country}"
+						},
+						{
+							"KeyName": "Phone",
+							"Value": "{Phone}"
+						},
+						{
+							"KeyName": "Fax",
+							"Value": "{Fax}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Customers_Detail",
+	"PrefersLargeCaption": true
+}

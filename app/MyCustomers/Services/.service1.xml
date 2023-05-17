@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="Tickets2Service" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="Tickets" EntityType="Tickets2Service.Tickets"/>
+        <EntitySet Name="Customers" EntityType="Tickets2Service.Customers"/>
+      </EntityContainer>
+      <EntityType Name="Tickets">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+        <Property Name="message" Type="Edm.String" MaxLength="100"/>
+        <Property Name="status" Type="Edm.String" MaxLength="100"/>
+        <Property Name="contact_ID" Type="Edm.Guid"/>
+      </EntityType>
+      <EntityType Name="Customers">
+        <Key>
+          <PropertyRef Name="CustomerID"/>
+        </Key>
+        <Property Name="CustomerID" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="CompanyName" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="ContactName" Type="Edm.String" MaxLength="30"/>
+        <Property Name="ContactTitle" Type="Edm.String" MaxLength="30"/>
+        <Property Name="Address" Type="Edm.String" MaxLength="60"/>
+        <Property Name="City" Type="Edm.String" MaxLength="15"/>
+        <Property Name="Region" Type="Edm.String" MaxLength="15"/>
+        <Property Name="PostalCode" Type="Edm.String" MaxLength="10"/>
+        <Property Name="Country" Type="Edm.String" MaxLength="15"/>
+        <Property Name="Phone" Type="Edm.String" MaxLength="24"/>
+        <Property Name="Fax" Type="Edm.String" MaxLength="24"/>
+      </EntityType>
+      <Annotations Target="Tickets2Service.Tickets/ID">
+        <Annotation Term="Core.Computed" Bool="true"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
